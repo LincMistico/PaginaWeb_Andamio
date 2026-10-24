@@ -1,18 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-vellum-sand: #f4e6cd;
-  --color-pressed-linen: #edddc3;
-  --color-aged-ink: #1e211e;
-  --color-charcoal-black: #000000;
-  --color-twilight-bronze: #8f774b;
-  --color-hayfield: #ba9d6a;
-  --color-wheat-sheaf: #d6bd97;
-
-  --color-banner-dark: #2b2d2f;
-  --color-banner-cyan: #00e5d9;
-  --color-banner-orange: #ff6b00;
-  --color-banner-white: #ffffff;
+  /* Paleta tomada de los logos (logo-andamio-labs / logo-andamio-tech) */
+  --color-canvas: #f8fafb;
+  --color-surface: #eef3f6;
+  --color-ink: #0c314c;
+  --color-ink-soft: #185a82;
+  --color-labs: #2e6a24;
+  --color-tech: #185a82;
+  --color-brand-a: #0f4c86;
+  --color-brand-b: #1a8bb8;
+  --color-brand-c: #2ec4a8;
+  --color-brand-d: #8ed64a;
 
   --font-display: "Satoshi", ui-sans-serif, system-ui, sans-serif;
 
@@ -41,8 +40,8 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: var(--color-vellum-sand);
-  color: var(--color-aged-ink);
+  background: var(--color-canvas);
+  color: var(--color-ink);
   font-family: var(--font-display);
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -69,32 +68,53 @@ img {
   transition: text-decoration-thickness 160ms ease, color 160ms ease;
 }
 
-.link-underline:hover {
-  text-decoration-thickness: 2px;
-  color: var(--color-twilight-bronze);
+@media (hover: hover) and (pointer: fine) {
+  .link-underline:hover {
+    text-decoration-thickness: 2px;
+    color: var(--color-brand-b);
+  }
+}
+
+.brand-stripe {
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--color-brand-a),
+    var(--color-brand-b),
+    var(--color-brand-c),
+    var(--color-brand-d)
+  );
 }
 
 .hero-gradient {
-  background: linear-gradient(
-    184deg,
-    var(--color-twilight-bronze) 0%,
-    var(--color-hayfield) 28%,
-    var(--color-wheat-sheaf) 58%,
-    var(--color-vellum-sand) 100%
-  );
+  background: linear-gradient(184deg, #e3f2f0 0%, var(--color-canvas) 65%);
 }
 
 .hairline {
   height: 1px;
   width: 100%;
-  background: var(--color-aged-ink);
+  background: var(--color-ink);
+  opacity: 0.15;
   border: 0;
+}
+
+.mobile-menu {
+  transition:
+    opacity 200ms var(--ease-out),
+    transform 200ms var(--ease-out),
+    visibility 200ms;
+}
+
+.mobile-menu[data-open="false"] {
+  opacity: 0;
+  transform: translateY(-8px);
+  visibility: hidden;
 }
 
 @keyframes rise-in {
   from {
     opacity: 0;
-    transform: translateY(18px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
@@ -111,27 +131,31 @@ img {
   }
 }
 
+:root {
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
 .animate-rise {
-  animation: rise-in 0.9s ease both;
+  animation: rise-in 600ms var(--ease-out) both;
 }
 
 .animate-fade {
-  animation: fade-in 1.1s ease both;
-}
-
-.animate-rise-delay {
-  animation: rise-in 1s ease 0.15s both;
+  animation: fade-in 400ms ease both;
 }
 
 .animate-rise-delay-2 {
-  animation: rise-in 1s ease 0.3s both;
+  animation: rise-in 600ms var(--ease-out) 160ms both;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .animate-rise,
   .animate-fade,
-  .animate-rise-delay,
   .animate-rise-delay-2 {
     animation: none;
+  }
+
+  .mobile-menu,
+  .mobile-menu[data-open="false"] {
+    transform: none;
   }
 }
