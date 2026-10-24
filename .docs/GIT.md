@@ -107,10 +107,10 @@ Este proyecto usa **Vite + React** dentro de la carpeta `web/`. Tras clonar:
 
 ```bash
 cd web
-npm install   # Instalar dependencias (crea node_modules, ignorado por git)
-npm run dev   # Servidor de desarrollo local
-npm run build # Compilar producción (genera dist/, ignorado por git)
+pnpm install   # Instalar dependencias (crea node_modules, ignorado por git)
+pnpm dev   # Servidor de desarrollo local
+pnpm build # Compilar producción (genera dist/, ignorado por git)
 ```
 
 `node_modules/` y `dist/` **no se suben a GitHub** (están en `.gitignore`);
-cada persona los genera localmente con `npm install` y `npm run build`.
+cada persona los genera localmente con `pnpm install` y `pnpm build`.

@@ -9,13 +9,13 @@ Código fuente: carpeta `web/`.
 ## Requisitos
 
 - [Node.js](https://nodejs.org/) **20 LTS** o superior
-- npm (incluido con Node)
+- [pnpm](https://pnpm.io/installation) (`npm i -g pnpm`)
 
 Comprobar versiones:
 
 ```bash
 node -v
-npm -v
+pnpm -v
 ```
 
 ---
@@ -24,8 +24,8 @@ npm -v
 
 ```bash
 cd web
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 Abrí la URL que imprime Vite (por defecto `http://localhost:5173`).
@@ -36,8 +36,8 @@ Abrí la URL que imprime Vite (por defecto `http://localhost:5173`).
 
 ```bash
 cd web
-npm install
-npm run build
+pnpm install
+pnpm build
 ```
 
 Salida: carpeta `web/dist/` (HTML, CSS y JS listos para servir).
@@ -46,7 +46,7 @@ Vista previa local del build:
 
 ```bash
 cd web
-npm run preview
+pnpm preview
 ```
 
 ---
@@ -57,7 +57,7 @@ npm run preview
 2. **Add new site → Import an existing project** (o arrastrá `web/dist` en *Deploy manually*).
 3. Si conectás el repo:
    - **Base directory:** `web`
-   - **Build command:** `npm run build`
+   - **Build command:** `pnpm build`
    - **Publish directory:** `web/dist`
 4. Deploy. Netlify asigna una URL `*.netlify.app`.
 
@@ -65,8 +65,8 @@ CLI (opcional):
 
 ```bash
 cd web
-npm run build
-npx netlify deploy --prod --dir=dist
+pnpm build
+pnpm dlx netlify deploy --prod --dir=dist
 ```
 
 ---
@@ -77,7 +77,7 @@ npx netlify deploy --prod --dir=dist
 2. Configuración del proyecto:
    - **Root Directory:** `web`
    - **Framework Preset:** Vite
-   - **Build Command:** `npm run build`
+   - **Build Command:** `pnpm build`
    - **Output Directory:** `dist`
 3. Deploy.
 
@@ -85,7 +85,7 @@ CLI:
 
 ```bash
 cd web
-npx vercel --prod
+pnpm dlx vercel --prod
 ```
 
 ---
@@ -105,7 +105,7 @@ export default defineConfig({
 
 ```bash
 cd web
-npm run build
+pnpm build
 ```
 
 3. Publicá el contenido de `web/dist` en la rama `gh-pages`, o usá una Action que ejecute el build y publique `dist`.
@@ -116,7 +116,7 @@ npm run build
 
 ## Opción D — Servidor propio / hosting compartido
 
-1. Generá el build (`npm run build` dentro de `web`).
+1. Generá el build (`pnpm build` dentro de `web`).
 2. Subí **todo** el contenido de `web/dist/` a la raíz del sitio (o a un subdirectorio) vía FTP/SFTP/cPanel.
 3. Asegurate de que el servidor sirva `index.html` para rutas desconocidas si más adelante agregás React Router.
 
@@ -149,34 +149,16 @@ server {
 
 ## Checklist post-despliegue
 
-- [ ] La home carga con tipografía Satoshi y fondo `#f4e6cd`
-- [ ] El logo aparece en el hero y en ambos banners
-- [ ] Banner **970×250** (Leaderboard) y **300×250** (Medium Rectangle) se ven correctos
-- [ ] Enlaces del menú (`#servicios`, `#banners`, `#contacto`) hacen scroll
+- [ ] La home carga con tipografía Satoshi y fondo `#F8FAFB`
+- [ ] El logo aparece en el hero y en los banners de Labs y Tech (sección Nosotros)
+- [ ] Enlaces del menú (`#servicios`, `#nosotros`, `#contacto`) hacen scroll
 - [ ] HTTPS activo en el dominio final
 
 ---
 
 ## Estructura relevante
 
-```
-Dominio y Web/
-├── DEPLOY.md                 ← este archivo
-├── .docs/
-│   ├── DESIGN.md             ← referencia de UI de la página
-│   └── banner.json           ← especificación de banners
-├── img/                      ← logos originales
-└── web/                      ← aplicación Vite
-    ├── public/img/           ← assets servidos en producción
-    ├── src/
-    │   ├── App.tsx
-    │   ├── components/
-    │   │   ├── BannerLeaderboard.tsx   (970×250)
-    │   │   └── BannerRectangle.tsx     (300×250)
-    │   └── index.css
-    ├── dist/                 ← generada por npm run build
-    └── package.json
-```
+Ver la sección **Estructura** del [README.md](../README.md) en la raíz.
 
 ---
 
@@ -184,7 +166,7 @@ Dominio y Web/
 
 | Acción              | Comando                          |
 |---------------------|----------------------------------|
-| Instalar dependencias | `cd web && npm install`        |
-| Desarrollo          | `cd web && npm run dev`          |
-| Build               | `cd web && npm run build`        |
-| Preview del build   | `cd web && npm run preview`      |
+| Instalar dependencias | `cd web && pnpm install`        |
+| Desarrollo          | `cd web && pnpm dev`          |
+| Build               | `cd web && pnpm build`        |
+| Preview del build   | `cd web && pnpm preview`      |
