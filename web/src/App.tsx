@@ -1,4 +1,4 @@
-import { BannerLeaderboard } from "./components/BannerLeaderboard";
+
 import { BannerRectangle } from "./components/BannerRectangle";
 import { BannerRectangleTech } from "./components/BannerRectangle_tech";
 
@@ -135,42 +135,7 @@ export default function App() {
 
         <hr className="hairline my-[60px] md:my-[80px]" />
 
-        {/* Banners — banner.json formats */}
-        <section id="banners" className="px-6 py-[40px] md:px-10">
-          <p className="text-caption tracking-[0.12em] uppercase">
-            Piezas de campaña
-          </p>
-          <h2 className="mt-4 max-w-[18ch] text-[clamp(36px,6vw,75px)] leading-[1] font-medium tracking-[-0.03em]">
-            Dos formatos.
-            <br />
-            Una marca.
-          </h2>
-          <p className="mt-6 max-w-[42ch] text-body leading-[1.5]">
-            Banners construidos con la paleta geométrica de{" "}
-            <code className="text-body-sm">banner.json</code>: marco,
-            acentos cyan y logo Andamio Labs/Tech.
-          </p>
-
-          <div className="mt-16 flex flex-col items-start gap-16 lg:flex-row lg:items-end lg:gap-20">
-            <figure className="w-full max-w-[970px]">
-              <figcaption className="mb-4 text-caption tracking-[0.08em] uppercase">
-                Large Leaderboard · 970×250
-              </figcaption>
-              <div className="overflow-x-auto">
-                <BannerLeaderboard />
-              </div>
-            </figure>
-
-            <figure>
-              <figcaption className="mb-4 text-caption tracking-[0.08em] uppercase">
-                Medium Rectangle · 300×250
-              </figcaption>
-              <BannerRectangleTech />
-            </figure>
-          </div>
-        </section>
-
-        <hr className="hairline my-[60px] md:my-[80px]" />
+        
 
         {/* Nosotros */}
 <section id="nosotros" className="px-6 py-[40px] md:px-10">
