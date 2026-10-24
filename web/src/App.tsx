@@ -165,7 +165,7 @@ export default function App() {
               <figcaption className="mb-4 text-caption tracking-[0.08em] uppercase">
                 Medium Rectangle · 300×250
               </figcaption>
-              <BannerRectangle />
+              <BannerRectangleTech />
             </figure>
           </div>
         </section>
@@ -185,7 +185,7 @@ export default function App() {
     {/* Columna 1: Un Laboratorio (Andamio Labs) */}
     <div className="flex flex-col justify-between">
       <div>
-        <span className="text-xs font-bold tracking-widest text-[#00E5D9] uppercase">
+        <span className="text-xs font-bold tracking-widest text-[#00e50f] uppercase">
           Andamio Labs
         </span>
         <h3 className="mt-2 text-2xl font-bold">Un Laboratorio de Ideas</h3>

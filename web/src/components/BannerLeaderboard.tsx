@@ -26,14 +26,14 @@ export function BannerLeaderboard() {
         <div className="relative z-10 flex w-[52%] flex-col justify-center px-8 py-5">
           <p
             className="m-0 text-[11px] font-bold tracking-[0.18em] uppercase"
-            style={{ color: "#00E5D9", fontFamily: "Arial, sans-serif" }}
+            style={{ color: "#00e50f", fontFamily: "Arial, sans-serif" }}
           >
             Laboratorio digital
           </p>
           <h2
             className="m-0 mt-2 text-[34px] leading-[0.95] font-black tracking-tight uppercase"
             style={{
-              color: "#00E5D9",
+              color: "#00e50f",
               fontFamily: "Arial Black, Montserrat, sans-serif",
             }}
           >
@@ -51,7 +51,7 @@ export function BannerLeaderboard() {
             href="#contacto"
             className="mt-4 inline-flex w-fit items-center justify-center px-5 py-2 text-[12px] font-bold tracking-wide uppercase transition-opacity hover:opacity-90"
             style={{
-              background: "#00E5D9",
+              background: "#00e50f",
               color: "#2B2D2F",
               borderRadius: 20,
               fontFamily: "Arial, sans-serif",

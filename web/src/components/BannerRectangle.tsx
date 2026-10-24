@@ -30,11 +30,11 @@ export function BannerRectangle() {
             background: "#acbccb",
           }}
         >
-          {/* Acento azul/turquesa en el borde diagonal */}
+          {/* Acento  en el borde diagonal */}
           <div
             className="absolute right-0 bottom-0 left-0 h-1"
             style={{
-              background: "#00E5D9",
+              background: "#00e50f",
               transform: "skewY(-5deg)",
               transformOrigin: "left",
             }}
@@ -53,25 +53,25 @@ export function BannerRectangle() {
           <h2
             className="m-0 text-[20px] leading-tight font-black tracking-tight uppercase"
             style={{
-              color: "#00E5D9",
+              color: "#00e50f",
               fontFamily: "Arial Black, Montserrat, sans-serif",
             }}
           >
-            Consultoría
+            Ideas que
             <br />
-            <span style={{ color: "#FFFFFF" }}>& Desarrollo</span>
+            <span style={{ color: "#FFFFFF" }}>Escalan</span>
           </h2>
           <p
             className="m-0 mt-1.5 text-[10px] leading-snug"
             style={{ color: "#FFFFFF", fontFamily: "Roboto, Arial, sans-serif" }}
           >
-            Tecnología y ciencia para escalar tu negocio.
+            Innovación, prototipado y soluciones listas para el mercado.
           </p>
           <a
             href="#contacto"
             className="mt-2.5 inline-flex items-center justify-center px-4 py-1.5 text-[11px] font-bold tracking-wide uppercase transition-opacity hover:opacity-90"
             style={{
-              background: "#00E5D9",
+              background: "#00e50f",
               color: "#2B2D2F",
               borderRadius: 20,
               fontFamily: "Arial, sans-serif",

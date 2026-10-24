@@ -19,7 +19,7 @@ export function BannerLeaderboardTech() {
         {/* Marco exterior */}
         <div
           className="pointer-events-none absolute inset-0 z-20"
-          style={{ border: "3px solid #00e50f" }}
+          style={{ border: "3px solid #00E5D9" }}
         />
 
         {/* Panel izquierdo — texto + CTA */}
