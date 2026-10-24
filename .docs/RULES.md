@@ -39,7 +39,7 @@ esos estilos.
 
 - Rama de trabajo: `main` (pull → trabajar → commit → push, solo si se ordena).
 - Verificación mínima antes de cualquier entrega de código: compilar con
-  `cd web && npm run build` (tsc + Vite). Si el build no pasa, no está listo.
+  `cd web && pnpm build` (tsc + Vite). Si el build no pasa, no está listo.
 - Documentación del proyecto en `.docs/` (DEPLOY.md, DESIGN.md, GIT.md, BITACORA.md,
   RULES.md). Toda documentación nueva va ahí, en español.
 
@@ -53,6 +53,6 @@ commits, decisiones y pendientes.
 
 ## 7. Entorno
 
-- Desarrollo local: `cd web && npm run dev` → `http://localhost:5173`
-- Producción: `cd web && npm run build` → salida en `web/dist/`
+- Desarrollo local: `cd web && pnpm dev` → `http://localhost:5173`
+- Producción: `cd web && pnpm build` → salida en `web/dist/`
 - Node.js 20 LTS o superior.
