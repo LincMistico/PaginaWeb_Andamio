@@ -1,5 +1,6 @@
 import { BannerLeaderboard } from "./components/BannerLeaderboard";
 import { BannerRectangle } from "./components/BannerRectangle";
+import { BannerRectangleTech } from "./components/BannerRectangle_tech";
 
 const navItems = [
   { label: "Inicio", href: "#inicio" },
@@ -223,7 +224,7 @@ export default function App() {
 
       {/* Banner de Tech */}
       <div className="mt-8 flex justify-center lg:justify-start">
-        <BannerRectangle />
+        <BannerRectangleTech />
       </div>
     </div>
 

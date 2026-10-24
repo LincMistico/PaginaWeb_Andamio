@@ -5,7 +5,7 @@ const LOGO = "/img/logo-andamio-tech.png";
  * Layout: top angled image mask, centered text block below
  * Spec: .docs/banner.json
  */
-export function BannerRectangle() {
+export function BannerRectangleTech() {
   return (
     <aside
       className="banner-rectangle relative mx-auto overflow-hidden shadow-lg"

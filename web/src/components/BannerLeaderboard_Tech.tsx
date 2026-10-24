@@ -5,12 +5,12 @@ const LOGO = "/img/logo-andamio-tech.png";
  * Layout: split horizontal — left dark panel, right angled image area
  * Spec: .docs/banner.json
  */
-export function BannerLeaderboard() {
+export function BannerLeaderboardTech() {
   return (
     <aside
       className="banner-leaderboard relative mx-auto overflow-hidden shadow-lg"
       style={{ width: 970, maxWidth: "100%", height: 250 }}
-      aria-label="Banner Andamio Labs — Large Leaderboard 970×250"
+      aria-label="Banner Andamio Tech — Large Leaderboard 970×250"
     >
       <div
         className="relative flex h-full w-full"
@@ -80,7 +80,7 @@ export function BannerLeaderboard() {
           <div className="flex h-full items-center justify-center pl-12 pr-6">
             <img
               src={LOGO}
-              alt="Andamio Labs"
+              alt="Andamio Tech"
               className="h-auto w-[100%] max-w-[340px] object-contain drop-shadow-md"
             />
           </div>

@@ -19,7 +19,7 @@ export function BannerRectangle() {
         {/* Marco exterior */}
         <div
           className="pointer-events-none absolute inset-0 z-20"
-          style={{ border: "3px solid #00E5D9" }}
+          style={{ border: "3px solid #00e50f" }}
         />
 
         {/* Máscara de imagen superior en ángulo */}
