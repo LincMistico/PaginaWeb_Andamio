@@ -1,16 +1,16 @@
-const LOGO = "/img/logo-andamio-tech.png";
+import type { Brand } from "../../data/brands";
 
 /**
  * Medium Rectangle — 300×250
  * Layout: top angled image mask, centered text block below
  * Spec: .docs/banner.json
  */
-export function BannerRectangleTech() {
+export function BannerRectangle({ brand }: { brand: Brand }) {
   return (
     <aside
       className="banner-rectangle relative mx-auto overflow-hidden shadow-lg"
       style={{ width: 300, height: 250 }}
-      aria-label="Banner Andamio Tech — Medium Rectangle 300×250"
+      aria-label={`Banner ${brand.name} — Medium Rectangle 300×250`}
     >
       <div
         className="relative flex h-full w-full flex-col"
@@ -19,7 +19,7 @@ export function BannerRectangleTech() {
         {/* Marco exterior */}
         <div
           className="pointer-events-none absolute inset-0 z-20"
-          style={{ border: "3px solid #00E5D9" }}
+          style={{ border: `3px solid ${brand.accent}` }}
         />
 
         {/* Máscara de imagen superior en ángulo */}
@@ -30,19 +30,18 @@ export function BannerRectangleTech() {
             background: "#acbccb",
           }}
         >
-          {/* Acento azul/turquesa en el borde diagonal */}
           <div
             className="absolute right-0 bottom-0 left-0 h-1"
             style={{
-              background: "#00E5D9",
+              background: brand.accent,
               transform: "skewY(-5deg)",
               transformOrigin: "left",
             }}
           />
           <div className="flex h-full items-center justify-center px-5 pt-2 pb-5">
             <img
-              src={LOGO}
-              alt="Andamio Tech"
+              src={brand.logo}
+              alt={brand.name}
               className="h-auto w-[80%] max-w-[220px] object-contain drop-shadow-md"
             />
           </div>
@@ -53,25 +52,25 @@ export function BannerRectangleTech() {
           <h2
             className="m-0 text-[20px] leading-tight font-black tracking-tight uppercase"
             style={{
-              color: "#00E5D9",
+              color: brand.accent,
               fontFamily: "Arial Black, Montserrat, sans-serif",
             }}
           >
-            Consultoría
+            {brand.rectangle.title}
             <br />
-            <span style={{ color: "#FFFFFF" }}>& Desarrollo</span>
+            <span style={{ color: "#FFFFFF" }}>{brand.rectangle.highlight}</span>
           </h2>
           <p
             className="m-0 mt-1.5 text-[10px] leading-snug"
             style={{ color: "#FFFFFF", fontFamily: "Roboto, Arial, sans-serif" }}
           >
-            Tecnología y ciencia para escalar tu negocio.
+            {brand.rectangle.body}
           </p>
           <a
             href="#contacto"
-            className="mt-2.5 inline-flex items-center justify-center px-4 py-1.5 text-[11px] font-bold tracking-wide uppercase transition-opacity hover:opacity-90"
+            className="mt-2.5 inline-flex items-center justify-center px-4 py-1.5 text-[11px] font-bold tracking-wide uppercase transition-[opacity,transform] duration-150 ease-out hover:opacity-90 active:scale-[0.97]"
             style={{
-              background: "#00E5D9",
+              background: brand.accent,
               color: "#2B2D2F",
               borderRadius: 20,
               fontFamily: "Arial, sans-serif",

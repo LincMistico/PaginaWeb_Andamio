@@ -1,16 +1,16 @@
-const LOGO = "/img/Logo Andamio Labs 4K.png";
+import type { Brand } from "../../data/brands";
 
 /**
  * Large Leaderboard — 970×250
  * Layout: split horizontal — left dark panel, right angled image area
  * Spec: .docs/banner.json
  */
-export function BannerLeaderboard() {
+export function BannerLeaderboard({ brand }: { brand: Brand }) {
   return (
     <aside
       className="banner-leaderboard relative mx-auto overflow-hidden shadow-lg"
       style={{ width: 970, maxWidth: "100%", height: 250 }}
-      aria-label="Banner Andamio Labs — Large Leaderboard 970×250"
+      aria-label={`Banner ${brand.name} — Large Leaderboard 970×250`}
     >
       <div
         className="relative flex h-full w-full"
@@ -19,21 +19,21 @@ export function BannerLeaderboard() {
         {/* Marco exterior */}
         <div
           className="pointer-events-none absolute inset-0 z-20"
-          style={{ border: "3px solid #00e50f" }}
+          style={{ border: `3px solid ${brand.accent}` }}
         />
 
         {/* Panel izquierdo — texto + CTA */}
         <div className="relative z-10 flex w-[52%] flex-col justify-center px-8 py-5">
           <p
             className="m-0 text-[11px] font-bold tracking-[0.18em] uppercase"
-            style={{ color: "#00e50f", fontFamily: "Arial, sans-serif" }}
+            style={{ color: brand.accent, fontFamily: "Arial, sans-serif" }}
           >
             Laboratorio digital
           </p>
           <h2
             className="m-0 mt-2 text-[34px] leading-[0.95] font-black tracking-tight uppercase"
             style={{
-              color: "#00e50f",
+              color: brand.accent,
               fontFamily: "Arial Black, Montserrat, sans-serif",
             }}
           >
@@ -49,9 +49,9 @@ export function BannerLeaderboard() {
           </p>
           <a
             href="#contacto"
-            className="mt-4 inline-flex w-fit items-center justify-center px-5 py-2 text-[12px] font-bold tracking-wide uppercase transition-opacity hover:opacity-90"
+            className="mt-4 inline-flex w-fit items-center justify-center px-5 py-2 text-[12px] font-bold tracking-wide uppercase transition-[opacity,transform] duration-150 ease-out hover:opacity-90 active:scale-[0.97]"
             style={{
-              background: "#00e50f",
+              background: brand.accent,
               color: "#2B2D2F",
               borderRadius: 20,
               fontFamily: "Arial, sans-serif",
@@ -79,8 +79,8 @@ export function BannerLeaderboard() {
           />
           <div className="flex h-full items-center justify-center pl-12 pr-6">
             <img
-              src={LOGO}
-              alt="Andamio Labs"
+              src={brand.logo}
+              alt={brand.name}
               className="h-auto w-[100%] max-w-[340px] object-contain drop-shadow-md"
             />
           </div>
